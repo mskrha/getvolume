@@ -1,0 +1,13 @@
+deploy:
+ tags:
+  - debian
+  - amd64
+ only:
+  - tags
+ script:
+  - export VERSION=${CI_BUILD_TAG}
+  - export ARCH=amd64
+  - cd source
+  - make deb
+  - /usr/sbin/reprepro-uploader getvolume_${VERSION}_${ARCH}.deb jessie stretch buster
+  - rm -fv getvolume_${VERSION}_${ARCH}.deb

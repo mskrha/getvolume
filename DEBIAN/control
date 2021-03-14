@@ -1,0 +1,8 @@
+Package: getvolume
+Version: INSTALL_VERSION
+Section: custom
+Priority: optional
+Architecture: INSTALL_ARCH
+Installed-Size: INSTALL_SIZE
+Maintainer: Michal Skrha <michal@skrha.cz>
+Description: Simple utility used to get current volume level on Master.
